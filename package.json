@@ -1,7 +1,7 @@
 {
   "name": "group-video-final",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "license": "MIT",
   "dependencies": {
     "concurrently": "^6.3.0",
@@ -14,8 +14,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm start",
-    "server": "npm server.js",
-    "start": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
     "client:build": "cd client && npm run build"
   }
 }
